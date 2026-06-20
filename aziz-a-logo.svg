@@ -1,0 +1,29 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1024" height="1024" rx="280" fill="black"/>
+  <rect x="88" y="88" width="848" height="848" rx="236" fill="url(#panelFill)"/>
+  <rect x="89.4" y="89.4" width="845.2" height="845.2" rx="234.6" stroke="url(#panelStroke)" stroke-width="2.8"/>
+  <path d="M517.537 205L776 809H664.515L598.318 646.741H425.864L360.257 809H248L506.463 205H517.537ZM561.711 557.512L512.381 434.651L462.471 557.512H561.711Z" fill="url(#letterFill)"/>
+  <path d="M512 265L720 752" stroke="url(#shine)" stroke-width="16" stroke-linecap="round" opacity="0.2"/>
+  <defs>
+    <linearGradient id="panelFill" x1="512" y1="88" x2="512" y2="936" gradientUnits="userSpaceOnUse">
+      <stop stop-color="white" stop-opacity="0.08"/>
+      <stop offset="0.4" stop-color="white" stop-opacity="0.025"/>
+      <stop offset="1" stop-color="white" stop-opacity="0.04"/>
+    </linearGradient>
+    <linearGradient id="panelStroke" x1="512" y1="88" x2="512" y2="936" gradientUnits="userSpaceOnUse">
+      <stop stop-color="white" stop-opacity="0.55"/>
+      <stop offset="0.18" stop-color="white" stop-opacity="0.18"/>
+      <stop offset="0.52" stop-color="white" stop-opacity="0.03"/>
+      <stop offset="0.82" stop-color="white" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="white" stop-opacity="0.42"/>
+    </linearGradient>
+    <linearGradient id="letterFill" x1="512" y1="205" x2="512" y2="809" gradientUnits="userSpaceOnUse">
+      <stop stop-color="white"/>
+      <stop offset="1" stop-color="#BEBEBE"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="512" y1="265" x2="720" y2="752" gradientUnits="userSpaceOnUse">
+      <stop stop-color="white"/>
+      <stop offset="1" stop-color="white" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+</svg>
