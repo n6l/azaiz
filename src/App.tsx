@@ -629,7 +629,7 @@ export default function App() {
                   <h3 className="text-2xl text-white">التكلفة التقديرية</h3>
                   <p className="mt-4 max-w-lg text-base leading-7 text-white/62">
                     غيّر نوع الخدمة وعدد الاختبارات والسرعة، وشوف الفرق بين الأسعار المعتادة والسعر
-                    الأنسب مع عزيز.
+                    الأنسب مع زنقتك.
                   </p>
 
                   <div className="mt-10 space-y-5">
