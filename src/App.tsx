@@ -103,6 +103,7 @@ const packages: PackageCard[] = [
 
 const navLinks = [
   { label: "المزايا", href: "#features" },
+  { label: "كيف نبدأ", href: "#process" },
   { label: "الباقات", href: "#packages" },
   { label: "الآراء", href: "#reviews" },
   { label: "الأسئلة", href: "#faq" },
@@ -144,30 +145,6 @@ const testimonials: Testimonial[] = [
     rating: 5,
     quote: "افضل موقع وافضل عيادة وربي ما في بعدها",
     highlight: "رأي مباشر وواضح",
-  },
-  {
-    name: "أبو راكان",
-    role: "عميل باقة Plus",
-    rating: 5,
-    quote:
-      "أكثر شيء فرق معي هو الوضوح. من أول يوم وأنا أعرف ماذا سأستلم ومتى، والتعامل راقٍ جدًا.",
-    highlight: "وضوح كامل في الخطوات",
-  },
-  {
-    name: "سارة",
-    role: "عميلة خدمة مخصصة",
-    rating: 5,
-    quote:
-      "التنسيق، السرعة، وطريقة الرد خلت التجربة مريحة جدًا. ما حسّيت بأي عشوائية أو تأخير مزعج.",
-    highlight: "تجربة مريحة وسريعة",
-  },
-  {
-    name: "فيصل",
-    role: "عميل متكرر",
-    rating: 4,
-    quote:
-      "الميزة الحقيقية هنا أن النتيجة تطلع مرتبة ومحترمة، وليس مجرد تسليم سريع وخلاص.",
-    highlight: "نتيجة مرتبة ومحترمة",
   },
 ];
 
@@ -454,17 +431,17 @@ export default function App() {
                   </div>
 
                   <div className="flex h-full items-center justify-end [direction:rtl]">
-                    <div className="w-full max-w-[24rem] p-5 text-right sm:p-7 lg:max-w-[25rem] lg:p-0">
+                    <div className="w-full max-w-[24rem] p-4 text-right sm:p-7 lg:max-w-[25rem] lg:p-0">
                       <p className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-xs tracking-[0.24em] text-white/62">
                         <Sparkles size={14} />
                         {brandTagline}
                       </p>
 
-                      <h1 className="mt-6 bg-[linear-gradient(180deg,rgba(255,255,255,0.98)_0%,rgba(214,221,228,0.9)_36%,rgba(112,124,136,0.74)_100%)] bg-clip-text font-[Instrument_Serif] text-5xl leading-[1.02] text-transparent sm:text-6xl lg:text-[4.6rem]">
+                      <h1 className="mt-5 bg-[linear-gradient(180deg,rgba(255,255,255,0.98)_0%,rgba(214,221,228,0.9)_36%,rgba(112,124,136,0.74)_100%)] bg-clip-text font-[Instrument_Serif] text-[2.8rem] leading-[1.02] text-transparent sm:mt-6 sm:text-6xl lg:text-[4.6rem]">
                         عيادة فك الزنقة
                       </h1>
 
-                      <p className="mt-5 text-base leading-8 text-white/72 sm:text-lg">
+                      <p className="mt-4 text-sm leading-7 text-white/72 sm:mt-5 sm:text-lg sm:leading-8">
                         {brandPromise}. واجهة واضحة، باقات مفهومة، وهوية تعطي انطباعًا قويًا
                         لأي شخص يدخل الموقع من أول دقيقة.
                       </p>
@@ -487,7 +464,7 @@ export default function App() {
                         </button>
                       </div>
 
-                      <div className="mt-8 grid grid-cols-3 gap-3 text-center">
+                      <div className="mt-7 grid grid-cols-1 gap-3 text-center sm:mt-8 sm:grid-cols-3">
                         {[
                           { label: "وضوح", value: "100%" },
                           { label: "رد أسرع", value: "24/7" },
@@ -526,6 +503,58 @@ export default function App() {
                 <p className="mt-4 text-xl leading-9 text-white/86">{item.copy}</p>
               </motion.article>
             ))}
+          </section>
+
+          <section id="process" className="mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.25 }}
+              transition={{ duration: 0.6 }}
+              className="max-w-3xl"
+            >
+              <p className="text-sm tracking-[0.35em] text-white/45">كيف نمشي معك</p>
+              <h2 className="mt-4 font-[Instrument_Serif] text-5xl leading-tight sm:text-6xl">
+                3 خطوات وتكون الزنقة انحلّت
+              </h2>
+              <p className="mt-5 text-lg leading-8 text-white/68">
+                هذا القسم مهم جدًا لأنه يريح الزائر بسرعة: ماذا يفعل الآن، وماذا يحدث بعد ذلك،
+                ومتى يتوقع النتيجة.
+              </p>
+            </motion.div>
+
+            <div className="mt-12 grid gap-5 md:grid-cols-3">
+              {[
+                {
+                  step: "01",
+                  title: "ترسل الطلب",
+                  copy: "تدخل، تفهم الباقة، ثم تتواصل معنا مباشرة بالطريقة الواضحة داخل الموقع.",
+                },
+                {
+                  step: "02",
+                  title: "نرتب التفاصيل",
+                  copy: "نحدد المطلوب، نرتب الخطوات، ونوضح لك المسار والمدة بدون لخبطة أو غموض.",
+                },
+                {
+                  step: "03",
+                  title: "تستلم النتيجة",
+                  copy: "تأخذ النتيجة بشكل مرتب وواضح مع تجربة تعطيك إحساس ثقة من البداية للنهاية.",
+                },
+              ].map((item, index) => (
+                <motion.article
+                  key={item.step}
+                  initial={{ opacity: 0, y: 18 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.25 }}
+                  transition={{ duration: 0.5, delay: index * 0.08 }}
+                  className="liquid-glass rounded-[30px] p-6 sm:p-7"
+                >
+                  <p className="text-sm tracking-[0.35em] text-[#FFB48C]">{item.step}</p>
+                  <h3 className="mt-4 text-2xl text-white">{item.title}</h3>
+                  <p className="mt-4 text-base leading-8 text-white/68">{item.copy}</p>
+                </motion.article>
+              ))}
+            </div>
           </section>
 
           <section id="packages" className="mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8">
@@ -822,7 +851,7 @@ export default function App() {
                   </p>
                 </motion.div>
 
-                <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+                <div className="mt-10 grid gap-5 md:max-w-xl">
                   {testimonials.map((item, index) => (
                     <motion.article
                       key={item.name}
@@ -980,6 +1009,47 @@ export default function App() {
             </motion.div>
           </section>
 
+          <section className="mx-auto max-w-7xl px-4 pb-14 sm:px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.25 }}
+              transition={{ duration: 0.6 }}
+              className="overflow-hidden rounded-[36px] border border-white/10 bg-[linear-gradient(135deg,rgba(255,102,82,0.18),rgba(255,255,255,0.04))] p-6 sm:p-8 lg:p-10"
+            >
+              <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-center">
+                <div className="text-right">
+                  <p className="text-sm tracking-[0.3em] text-white/52">الخطوة الأخيرة</p>
+                  <h2 className="mt-4 font-[Instrument_Serif] text-4xl leading-tight text-white sm:text-5xl">
+                    إذا تبي الزنقة تنفك، تواصل الآن
+                  </h2>
+                  <p className="mt-4 max-w-2xl text-base leading-8 text-white/72 sm:text-lg">
+                    كل شيء صار أوضح أمام الزائر: الخدمة، الباقات، الآراء، وطريقة العمل. بقي فقط
+                    زر قرار قوي يدفعه للتواصل بدل أن يطلع من الصفحة مترددًا.
+                  </p>
+                </div>
+
+                <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
+                  <button
+                    type="button"
+                    className="liquid-glass inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-medium text-white transition hover:bg-white/[0.06]"
+                    onClick={() => setContactOpen(true)}
+                  >
+                    ابدأ الآن
+                    <ArrowRight size={16} />
+                  </button>
+                  <button
+                    type="button"
+                    className="inline-flex items-center justify-center rounded-full border border-white/12 bg-white/[0.03] px-6 py-3 text-sm font-medium text-white/90 transition hover:bg-white/[0.06]"
+                    onClick={() => scrollToId("#packages")}
+                  >
+                    راجع الباقات
+                  </button>
+                </div>
+              </div>
+            </motion.div>
+          </section>
+
           <footer className="mx-auto max-w-7xl px-4 pb-32 sm:px-6 lg:px-8">
             <div className="flex flex-col items-center justify-between gap-4 rounded-[28px] border border-white/10 bg-white/[0.03] px-6 py-6 text-center md:flex-row md:text-right">
               <div>
@@ -1119,11 +1189,11 @@ export default function App() {
                     </button>
                   </div>
 
-                  <div className="mt-6 grid gap-3">
-                    {employees.map((employee) => (
+                  <div className="mt-6 grid gap-3 sm:grid-cols-2">
+                    {employees.map((employee, index) => (
                       <div
                         key={employee.username}
-                        className="rounded-[16px] border border-white/8 bg-white/[0.03] p-5 text-right shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]"
+                        className="rounded-[20px] border border-white/8 bg-white/[0.03] p-5 text-right shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]"
                       >
                         <div className="flex items-start justify-between gap-4">
                           <span className="inline-flex h-10 w-10 items-center justify-center rounded-[12px] border border-white/10 bg-white/[0.04] text-white">
@@ -1131,12 +1201,22 @@ export default function App() {
                           </span>
 
                           <div className="flex-1">
+                            <p className="text-xs tracking-[0.22em] text-white/42">
+                              {index === 0
+                                ? "فريق التنفيذ"
+                                : index === 1
+                                  ? "فريق المتابعة"
+                                  : "فريق الدعم"}
+                            </p>
                             <p className="text-lg text-white/95">{employee.name}</p>
                             <p
                               dir="ltr"
                               className="mt-2 font-[Instrument_Serif] text-[1.65rem] tracking-tight text-white/72"
                             >
                               {employee.username}
+                            </p>
+                            <p className="mt-3 text-sm leading-7 text-white/56">
+                              عضو رسمي ضمن فريق عيادة فك الزنقة ومسؤول عن إبقاء التجربة مرتبة وسريعة.
                             </p>
                           </div>
                         </div>
