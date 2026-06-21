@@ -1102,9 +1102,9 @@ export default function App() {
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 exit={{ opacity: 0, y: 20, scale: 0.98 }}
                 transition={{ duration: 0.24 }}
-                className="fixed inset-x-0 bottom-0 z-50 mx-auto w-full md:inset-x-4 md:top-1/2 md:max-w-md md:-translate-y-1/2"
+                className="fixed inset-x-0 bottom-0 z-50 mx-auto w-full md:inset-x-4 md:top-24 md:bottom-auto md:max-w-md"
               >
-                <div className="liquid-glass max-h-[85vh] overflow-y-auto rounded-t-[24px] border border-white/10 bg-black/90 p-4 shadow-[0_28px_80px_rgba(0,0,0,0.48)] md:max-h-none md:rounded-[18px] md:bg-black/55 md:p-5">
+                <div className="liquid-glass max-h-[85vh] overflow-y-auto rounded-t-[24px] border border-white/10 bg-black/90 p-4 shadow-[0_28px_80px_rgba(0,0,0,0.48)] md:max-h-[78vh] md:rounded-[18px] md:bg-black/55 md:p-5">
                   <div className="mx-auto mb-4 h-1.5 w-14 rounded-full bg-white/12 md:hidden" />
                   <div className="flex items-start justify-between gap-4 border-b border-white/8 pb-4 md:pb-5">
                     <div>
@@ -1182,9 +1182,9 @@ export default function App() {
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 exit={{ opacity: 0, y: 20, scale: 0.98 }}
                 transition={{ duration: 0.24 }}
-                className="fixed inset-x-0 bottom-0 z-50 mx-auto w-full md:inset-x-4 md:top-1/2 md:max-w-3xl md:-translate-y-1/2"
+                className="fixed inset-x-0 bottom-0 z-50 mx-auto w-full md:inset-x-4 md:top-24 md:bottom-auto md:max-w-3xl"
               >
-                <div className="liquid-glass max-h-[88vh] overflow-y-auto rounded-t-[24px] border border-white/10 bg-black/92 p-4 shadow-[0_28px_80px_rgba(0,0,0,0.48)] md:max-h-none md:rounded-[18px] md:bg-black/55 md:p-6">
+                <div className="liquid-glass max-h-[88vh] overflow-y-auto rounded-t-[24px] border border-white/10 bg-black/92 p-4 shadow-[0_28px_80px_rgba(0,0,0,0.48)] md:max-h-[80vh] md:rounded-[18px] md:bg-black/55 md:p-6">
                   <div className="mx-auto mb-4 h-1.5 w-14 rounded-full bg-white/12 md:hidden" />
                   <div className="flex items-start justify-between gap-4 border-b border-white/8 pb-4 md:pb-5">
                     <div>
