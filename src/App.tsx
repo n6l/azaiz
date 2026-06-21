@@ -99,9 +99,9 @@ const contacts: ContactCard[] = [
 ];
 
 const employees: EmployeeCard[] = [
-  { name: "yoyo", username: "iconiiicc" },
-  { name: "misa", username: "lil.doodd" },
-  { name: "Mia / .56", username: "a7xiilx" },
+  { name: "Dr-yoyo", username: "iconiiicc" },
+  { name: "Dr-misa", username: "lil.doodd" },
+  { name: "Dr-Mia / .56", username: "a7xiilx" },
 ];
 
 type HeroHlsVideoProps = {
