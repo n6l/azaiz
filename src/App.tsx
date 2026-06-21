@@ -1102,9 +1102,9 @@ export default function App() {
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 exit={{ opacity: 0, y: 20, scale: 0.98 }}
                 transition={{ duration: 0.24 }}
-                className="fixed inset-x-4 top-1/2 z-50 mx-auto w-full max-w-md -translate-y-1/2"
+                className="fixed inset-x-3 top-1/2 z-50 mx-auto w-full max-w-md -translate-y-1/2 sm:inset-x-4"
               >
-                <div className="liquid-glass max-h-[80vh] overflow-y-auto rounded-[18px] border border-white/10 bg-black/88 p-4 shadow-[0_28px_80px_rgba(0,0,0,0.48)] sm:bg-black/55 sm:p-5">
+                <div className="liquid-glass rounded-[18px] border border-white/10 bg-black/88 p-4 shadow-[0_28px_80px_rgba(0,0,0,0.48)] sm:bg-black/55 sm:p-5">
                   <div className="flex items-start justify-between gap-4 border-b border-white/8 pb-4 sm:pb-5">
                     <div>
                       <p className="text-sm tracking-[0.3em] text-white/45">
@@ -1121,22 +1121,22 @@ export default function App() {
                     </button>
                   </div>
 
-                  <div className="mt-5 flex flex-col gap-3 sm:mt-6">
+                  <div className="mt-5 flex flex-col gap-2.5 sm:mt-6 sm:gap-3">
                     {contacts.map((contact) => (
                       <div
                         key={contact.handle}
-                        className={`w-full rounded-[16px] border bg-white/[0.03] p-3.5 text-right shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] sm:p-4 ${
+                        className={`w-full rounded-[16px] border bg-white/[0.03] p-3 text-right shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] sm:p-4 ${
                           contact.featured ? "border-white/18 bg-white/[0.05]" : "border-white/8"
                         }`}
                       >
-                        <div className="flex items-start justify-between gap-4">
-                          <span className="inline-flex h-9 w-9 items-center justify-center rounded-[12px] border border-white/10 bg-white/[0.04] text-white">
+                        <div className="flex items-start justify-between gap-3">
+                          <span className="inline-flex h-8 w-8 items-center justify-center rounded-[12px] border border-white/10 bg-white/[0.04] text-white sm:h-9 sm:w-9">
                             <FaDiscord size={16} />
                           </span>
 
                           <div className="flex-1">
                             <p
-                              className={`text-sm tracking-[0.22em] ${
+                              className={`text-xs tracking-[0.22em] ${
                                 contact.featured ? "text-white/55" : "text-white/45"
                               }`}
                             >
@@ -1146,8 +1146,8 @@ export default function App() {
                               dir="ltr"
                               className={`mt-2 font-[Instrument_Serif] tracking-tight ${
                                 contact.featured
-                                  ? "text-[1.45rem] text-white sm:text-[1.8rem]"
-                                  : "text-[1.3rem] text-white/92 sm:text-[1.65rem]"
+                                  ? "text-[1.3rem] text-white sm:text-[1.8rem]"
+                                  : "text-[1.15rem] text-white/92 sm:text-[1.65rem]"
                               }`}
                             >
                               {contact.handle.replace("@", "")}
@@ -1181,9 +1181,9 @@ export default function App() {
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 exit={{ opacity: 0, y: 20, scale: 0.98 }}
                 transition={{ duration: 0.24 }}
-                className="fixed inset-x-4 top-1/2 z-50 mx-auto w-full max-w-3xl -translate-y-1/2"
+                className="fixed inset-x-3 top-1/2 z-50 mx-auto w-full max-w-3xl -translate-y-1/2 sm:inset-x-4"
               >
-                <div className="liquid-glass max-h-[82vh] overflow-y-auto rounded-[18px] border border-white/10 bg-black/90 p-4 shadow-[0_28px_80px_rgba(0,0,0,0.48)] sm:bg-black/55 sm:p-6">
+                <div className="liquid-glass rounded-[18px] border border-white/10 bg-black/90 p-4 shadow-[0_28px_80px_rgba(0,0,0,0.48)] sm:bg-black/55 sm:p-6">
                   <div className="flex items-start justify-between gap-4 border-b border-white/8 pb-4 sm:pb-5">
                     <div>
                       <p className="text-sm tracking-[0.3em] text-white/45">الفريق الرسمي</p>
@@ -1201,31 +1201,31 @@ export default function App() {
                     </button>
                   </div>
 
-                  <div className="mt-5 grid gap-3 sm:mt-6 sm:grid-cols-2 lg:grid-cols-3">
+                  <div className="mt-5 grid gap-2.5 sm:mt-6 sm:grid-cols-2 lg:grid-cols-3">
                     {employees.map((employee) => (
                       <div
                         key={employee.username}
-                        className="rounded-[18px] border border-white/8 bg-white/[0.03] p-3.5 text-right shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] sm:rounded-[20px] sm:p-4"
+                        className="rounded-[18px] border border-white/8 bg-white/[0.03] p-3 text-right shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] sm:rounded-[20px] sm:p-4"
                       >
-                        <div className="flex items-start justify-between gap-3">
-                          <span className="inline-flex h-9 w-9 items-center justify-center rounded-[12px] border border-white/10 bg-white/[0.04] text-white sm:h-10 sm:w-10">
+                        <div className="flex items-start justify-between gap-2.5">
+                          <span className="inline-flex h-8 w-8 items-center justify-center rounded-[12px] border border-white/10 bg-white/[0.04] text-white sm:h-10 sm:w-10">
                             <FaDiscord size={16} />
                           </span>
 
                           <div className="flex-1">
                             <p
                               dir="ltr"
-                              className="text-[1rem] font-semibold tracking-tight text-white/95 sm:text-[1.05rem]"
+                              className="text-[0.95rem] font-semibold tracking-tight text-white/95 sm:text-[1.05rem]"
                             >
                               {employee.name}
                             </p>
                             <p
                               dir="ltr"
-                              className="mt-1.5 font-[Instrument_Serif] text-[1.25rem] tracking-tight text-white/72 sm:mt-2 sm:text-[1.45rem]"
+                              className="mt-1 font-[Instrument_Serif] text-[1.1rem] tracking-tight text-white/72 sm:mt-2 sm:text-[1.45rem]"
                             >
                               {employee.username}
                             </p>
-                            <p className="mt-2 text-xs leading-6 text-white/56 sm:mt-3 sm:text-sm">
+                            <p className="mt-1.5 text-[11px] leading-5 text-white/56 sm:mt-3 sm:text-sm sm:leading-6">
                               عضو رسمي ضمن الكادر المعتمد.
                             </p>
                           </div>
