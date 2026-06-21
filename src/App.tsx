@@ -413,23 +413,23 @@ export default function App() {
         <main>
           <section
             id="hero"
-            className="mx-auto flex min-h-screen max-w-7xl items-start px-4 pb-20 pt-24 sm:px-6 lg:px-8"
+            className="mx-auto flex min-h-[calc(100vh-2rem)] max-w-7xl items-start px-4 pb-14 pt-20 sm:min-h-screen sm:pb-20 sm:pt-24 sm:px-6 lg:px-8"
           >
             <div className="mx-auto w-full max-w-6xl">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-                className="relative overflow-hidden rounded-[40px] border border-white/8 px-4 py-5 sm:px-6 sm:py-6 lg:px-6 lg:py-6"
+                className="relative overflow-hidden rounded-[32px] border border-white/8 px-4 py-4 sm:rounded-[40px] sm:px-6 sm:py-6 lg:px-6 lg:py-6"
               >
-                <div className="absolute inset-4 z-0 overflow-hidden rounded-[28px] sm:inset-6 lg:hidden">
+                <div className="absolute inset-3 z-0 overflow-hidden rounded-[24px] sm:inset-6 lg:hidden">
                   <div className="absolute inset-0 bg-[#020202]" />
                   <HeroHlsVideo className="absolute inset-0 h-full w-full object-cover opacity-54 brightness-[0.56] contrast-[1.04] saturate-[0.72]" />
                   <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.24)_0%,rgba(0,0,0,0.58)_52%,rgba(0,0,0,0.88)_100%)]" />
                   <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(0,0,0,0.64)_0%,rgba(0,0,0,0.12)_46%,rgba(0,0,0,0.64)_100%)]" />
                 </div>
 
-                <div className="relative z-10 min-h-[22rem] lg:grid lg:min-h-[24rem] lg:grid-cols-[minmax(0,1.55fr)_minmax(20rem,0.95fr)] lg:items-center lg:gap-10 lg:[direction:ltr]">
+                <div className="relative z-10 min-h-[18rem] lg:grid lg:min-h-[24rem] lg:grid-cols-[minmax(0,1.55fr)_minmax(20rem,0.95fr)] lg:items-center lg:gap-10 lg:[direction:ltr]">
                   <div className="hidden h-full min-h-[21rem] overflow-hidden rounded-[30px] lg:relative lg:block">
                     <div className="absolute inset-0 bg-[#020202]" />
                     <HeroHlsVideo className="absolute inset-0 h-full w-full object-cover opacity-60 brightness-[0.58] contrast-[1.04] saturate-[0.74]" />
@@ -438,19 +438,19 @@ export default function App() {
                   </div>
 
                   <div className="flex h-full items-center justify-end [direction:rtl]">
-                    <div className="w-full max-w-[24rem] p-4 text-right sm:p-7 lg:max-w-[25rem] lg:p-0">
-                      <h1 className="mt-5 bg-[linear-gradient(180deg,rgba(255,255,255,0.98)_0%,rgba(214,221,228,0.9)_36%,rgba(112,124,136,0.74)_100%)] bg-clip-text font-[Instrument_Serif] text-[2.8rem] leading-[1.02] text-transparent sm:mt-6 sm:text-6xl lg:text-[4.6rem]">
+                    <div className="w-full max-w-[24rem] p-3 text-right sm:p-7 lg:max-w-[25rem] lg:p-0">
+                      <h1 className="mt-4 bg-[linear-gradient(180deg,rgba(255,255,255,0.98)_0%,rgba(214,221,228,0.9)_36%,rgba(112,124,136,0.74)_100%)] bg-clip-text font-[Instrument_Serif] text-[2.45rem] leading-[1.02] text-transparent sm:mt-6 sm:text-6xl lg:text-[4.6rem]">
                         عيادة فك الزنقة
                       </h1>
 
-                      <p className="mt-4 text-sm leading-7 text-white/72 sm:mt-5 sm:text-lg sm:leading-8">
+                      <p className="mt-3 text-sm leading-7 text-white/72 sm:mt-5 sm:text-lg sm:leading-8">
                         {brandPromise}. واجهة واضحة وباقات مفهومة وانطباع قوي من أول زيارة.
                       </p>
 
-                      <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:justify-end">
+                      <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:justify-end">
                         <button
                           type="button"
-                          className="liquid-glass inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-medium text-white transition hover:bg-white/[0.05]"
+                          className="liquid-glass inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-medium text-white transition hover:bg-white/[0.05] sm:min-h-0 sm:w-auto"
                           onClick={() => setContactOpen(true)}
                         >
                           تواصل مع الإدارة
@@ -458,7 +458,7 @@ export default function App() {
                         </button>
                         <button
                           type="button"
-                          className="inline-flex items-center justify-center rounded-full border border-white/12 bg-white/[0.03] px-6 py-3 text-sm font-medium text-white/90 transition hover:bg-white/[0.06]"
+                          className="inline-flex min-h-12 w-full items-center justify-center rounded-full border border-white/12 bg-white/[0.03] px-6 py-3 text-sm font-medium text-white/90 transition hover:bg-white/[0.06] sm:min-h-0 sm:w-auto"
                           onClick={() => scrollToId("#reviews")}
                         >
                           شاهد آراء العملاء
@@ -468,7 +468,7 @@ export default function App() {
                       <div className="mt-3 flex flex-col gap-3 sm:flex-row sm:justify-end">
                         <button
                           type="button"
-                          className="inline-flex items-center justify-center rounded-full border border-white/12 bg-white/[0.03] px-6 py-3 text-sm font-medium text-white/90 transition hover:bg-white/[0.06]"
+                          className="inline-flex min-h-12 w-full items-center justify-center rounded-full border border-white/12 bg-white/[0.03] px-6 py-3 text-sm font-medium text-white/90 transition hover:bg-white/[0.06] sm:min-h-0 sm:w-auto"
                           onClick={() => setEmployeesOpen(true)}
                         >
                           استعراض الفريق الرسمي
@@ -484,7 +484,7 @@ export default function App() {
 
           <section
             id="features"
-            className="mx-auto grid max-w-7xl gap-6 px-4 pb-24 sm:px-6 md:grid-cols-3 lg:px-8"
+            className="mx-auto grid max-w-7xl gap-4 px-4 pb-20 sm:gap-6 sm:px-6 md:grid-cols-3 lg:px-8"
           >
             {featureCards.map((item, index) => (
               <motion.article
@@ -493,7 +493,7 @@ export default function App() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.35 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="liquid-glass rounded-[32px] p-8"
+                className="liquid-glass rounded-[28px] p-6 sm:rounded-[32px] sm:p-8"
               >
                 <p className="text-sm tracking-[0.28em] text-white/45">{item.title}</p>
                 <p className="mt-4 text-xl leading-9 text-white/86">{item.copy}</p>
@@ -501,7 +501,7 @@ export default function App() {
             ))}
           </section>
 
-          <section className="mx-auto max-w-7xl px-4 pb-8 sm:px-6 lg:px-8">
+          <section className="mx-auto max-w-7xl px-4 pb-6 sm:px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -521,7 +521,7 @@ export default function App() {
             </motion.div>
           </section>
 
-          <section id="process" className="mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8">
+          <section id="process" className="mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -538,7 +538,7 @@ export default function App() {
               </p>
             </motion.div>
 
-            <div className="mt-12 grid gap-5 md:grid-cols-3">
+            <div className="mt-10 grid gap-4 sm:gap-5 md:grid-cols-3">
               {[
                 {
                   step: "01",
@@ -562,7 +562,7 @@ export default function App() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.25 }}
                   transition={{ duration: 0.5, delay: index * 0.08 }}
-                  className="liquid-glass rounded-[30px] p-6 sm:p-7"
+                  className="liquid-glass rounded-[26px] p-5 sm:rounded-[30px] sm:p-7"
                 >
                   <p className="text-sm tracking-[0.35em] text-[#FFB48C]">{item.step}</p>
                   <h3 className="mt-4 text-2xl text-white">{item.title}</h3>
@@ -572,7 +572,7 @@ export default function App() {
             </div>
           </section>
 
-          <section id="packages" className="mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8">
+          <section id="packages" className="mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -587,7 +587,7 @@ export default function App() {
               <p className="mt-5 text-lg text-white/68">خيارات واضحة وتجربة مرتبة.</p>
             </motion.div>
 
-            <div className="mt-14 grid gap-6 lg:grid-cols-3">
+            <div className="mt-10 grid gap-4 sm:mt-14 sm:gap-6 lg:grid-cols-3">
               {packages.map((pkg, index) => (
                 <motion.article
                   key={pkg.name}
@@ -596,7 +596,7 @@ export default function App() {
                   viewport={{ once: true, amount: 0.2 }}
                   transition={{ duration: 0.65, delay: index * 0.1 }}
                   whileHover={{ y: -8 }}
-                  className={`liquid-glass flex min-h-[520px] flex-col rounded-[36px] p-8 transition-transform ${
+                  className={`liquid-glass flex min-h-[unset] flex-col rounded-[28px] p-5 transition-transform sm:min-h-[520px] sm:rounded-[36px] sm:p-8 ${
                     pkg.featured ? "ring-1 ring-white/20" : ""
                   }`}
                 >
@@ -609,21 +609,21 @@ export default function App() {
                         </span>
                       ) : null}
                     </div>
-                    <div className="mt-5 space-y-2">
-                      <p className="bg-[linear-gradient(180deg,rgba(255,255,255,0.98)_0%,rgba(214,221,228,0.88)_36%,rgba(112,124,136,0.72)_100%)] bg-clip-text font-[Instrument_Serif] text-4xl text-transparent">
+                    <div className="mt-4 space-y-1.5 sm:mt-5 sm:space-y-2">
+                      <p className="bg-[linear-gradient(180deg,rgba(255,255,255,0.98)_0%,rgba(214,221,228,0.88)_36%,rgba(112,124,136,0.72)_100%)] bg-clip-text font-[Instrument_Serif] text-[2rem] text-transparent sm:text-4xl">
                         {pkg.priceLines[0]}
                       </p>
                       <p className="text-sm text-white/56">{pkg.priceLines[1]}</p>
                       <p className="text-sm text-white/56">{pkg.priceLines[2]}</p>
                     </div>
-                    <p className="mt-6 text-lg leading-8 text-white/82">{pkg.description}</p>
+                    <p className="mt-5 text-base leading-7 text-white/82 sm:mt-6 sm:text-lg sm:leading-8">{pkg.description}</p>
                   </div>
 
-                  <div className="mt-10">
+                  <div className="mt-8 sm:mt-10">
                     <p className="text-sm text-white/48">ما تتضمنه الباقة</p>
                   </div>
 
-                  <div className="mt-6 flex-1 space-y-4">
+                  <div className="mt-5 flex-1 space-y-3 sm:mt-6 sm:space-y-4">
                     {pkg.bullets.map((bullet) => (
                       <div key={bullet} className="flex items-center gap-3 text-white/76">
                         <span className="liquid-glass inline-flex rounded-full p-2">
@@ -634,10 +634,10 @@ export default function App() {
                     ))}
                   </div>
 
-                  <div className="mt-10 border-t border-white/10 pt-8">
+                  <div className="mt-8 border-t border-white/10 pt-6 sm:mt-10 sm:pt-8">
                     <button
                       type="button"
-                      className="liquid-glass inline-flex w-full items-center justify-center rounded-full px-5 py-3 text-sm font-medium text-white transition hover:bg-white/[0.05]"
+                      className="liquid-glass inline-flex min-h-12 w-full items-center justify-center rounded-full px-5 py-3 text-sm font-medium text-white transition hover:bg-white/[0.05]"
                       onClick={() => setContactOpen(true)}
                     >
                       ابدأ الآن
@@ -654,7 +654,7 @@ export default function App() {
 
           <section
             id="calculator-section"
-            className="bg-black px-4 py-16 md:px-16 md:py-28"
+            className="bg-black px-4 py-14 sm:py-16 md:px-16 md:py-28"
           >
             <div className="mx-auto max-w-7xl">
               <div className="mx-auto max-w-3xl text-center">
@@ -664,12 +664,12 @@ export default function App() {
                 </h2>
               </div>
 
-              <div className="mt-12 grid overflow-hidden rounded-[32px] border border-white/10 lg:grid-cols-2">
-                <div className="bg-[#0D0D0D] p-8 lg:p-12">
+              <div className="mt-10 grid overflow-hidden rounded-[28px] border border-white/10 sm:mt-12 sm:rounded-[32px] lg:grid-cols-2">
+                <div className="bg-[#0D0D0D] p-5 sm:p-8 lg:p-12">
                   <div className="divide-y divide-[#1E1E1E]">
-                    <div className="pb-8">
+                    <div className="pb-6 sm:pb-8">
                       <h3 className="text-xl text-white">وش نوع الخدمة اللي تحتاجها؟</h3>
-                      <div className="mt-6 space-y-4">
+                      <div className="mt-5 space-y-3 sm:mt-6 sm:space-y-4">
                         {[
                           { label: "حل اختبار", value: "design" as const },
                           { label: "تأهيل", value: "development" as const },
@@ -678,7 +678,7 @@ export default function App() {
                           <button
                             key={option.value}
                             type="button"
-                            className="flex w-full items-center justify-between rounded-2xl border border-white/8 bg-white/[0.02] px-4 py-4 text-right transition hover:bg-white/[0.04]"
+                            className="flex min-h-12 w-full items-center justify-between rounded-2xl border border-white/8 bg-white/[0.02] px-4 py-4 text-right transition hover:bg-white/[0.04]"
                             onClick={() => setServiceType(option.value)}
                           >
                             <span
@@ -696,13 +696,13 @@ export default function App() {
                       </div>
                     </div>
 
-                    <div className="py-8">
-                      <div className="flex items-center justify-between gap-4">
+                    <div className="py-6 sm:py-8">
+                      <div className="flex items-center justify-between gap-3">
                         <span className="text-xl text-[#FF5656]">{pages}</span>
                         <h3 className="text-xl text-white">كم اختبار رح تطلب نساعدك؟</h3>
                       </div>
 
-                      <div className="mt-6">
+                      <div className="mt-5 sm:mt-6">
                         <input
                           type="range"
                           min={1}
@@ -719,9 +719,9 @@ export default function App() {
                       </div>
                     </div>
 
-                    <div className="py-8">
+                    <div className="py-6 sm:py-8">
                       <h3 className="text-xl text-white">إضافات ممكن تحتاجها</h3>
-                      <div className="mt-6 space-y-4">
+                      <div className="mt-5 space-y-3 sm:mt-6 sm:space-y-4">
                         {[
                           {
                             label: "أحتاج مساعدة في تجهيز المحتوى",
@@ -739,7 +739,7 @@ export default function App() {
                           <button
                             key={option.label}
                             type="button"
-                            className="flex w-full items-center justify-between gap-4 rounded-2xl border border-white/8 bg-white/[0.02] px-4 py-4 text-right transition hover:bg-white/[0.04]"
+                            className="flex min-h-12 w-full items-center justify-between gap-4 rounded-2xl border border-white/8 bg-white/[0.02] px-4 py-4 text-right transition hover:bg-white/[0.04]"
                             onClick={option.onToggle}
                           >
                             <span className="text-sm text-[#FF5656]">{option.price}</span>
@@ -760,9 +760,9 @@ export default function App() {
                       </div>
                     </div>
 
-                    <div className="pt-8">
+                    <div className="pt-6 sm:pt-8">
                       <h3 className="text-xl text-white">متى تحتاج ننجز لك؟</h3>
-                      <div className="mt-6 space-y-4">
+                      <div className="mt-5 space-y-3 sm:mt-6 sm:space-y-4">
                         {[
                           { label: "خلال 7 أيام", value: "rush" as const, price: "+100 د.إ / لكل اختبار" },
                           { label: "خلال 14 يوم", value: "fast" as const, price: "+25 د.إ / لكل اختبار" },
@@ -775,7 +775,7 @@ export default function App() {
                           <button
                             key={option.value}
                             type="button"
-                            className="flex w-full items-center justify-between gap-4 rounded-2xl border border-white/8 bg-white/[0.02] px-4 py-4 text-right transition hover:bg-white/[0.04]"
+                            className="flex min-h-12 w-full items-center justify-between gap-4 rounded-2xl border border-white/8 bg-white/[0.02] px-4 py-4 text-right transition hover:bg-white/[0.04]"
                             onClick={() => setTimeline(option.value)}
                           >
                             <span
@@ -804,7 +804,7 @@ export default function App() {
                   </div>
                 </div>
 
-                <div className="min-h-[718px] border-t border-white/10 p-8 lg:min-h-[717.98px] lg:rounded-r-[32px] lg:border-l lg:border-t-0 lg:p-12">
+                <div className="min-h-[unset] border-t border-white/10 p-5 sm:p-8 lg:min-h-[717.98px] lg:rounded-r-[32px] lg:border-l lg:border-t-0 lg:p-12">
                   <div className="flex items-center gap-3 text-white/80">
                     <ShieldCheck size={18} />
                     <p className="text-sm tracking-[0.2em]">تقدير واضح قبل البدء</p>
@@ -815,26 +815,26 @@ export default function App() {
                     الأنسب مع عيادة فك الزنقة.
                   </p>
 
-                  <div className="mt-10 space-y-5">
-                    <div className="rounded-[24px] bg-white/[0.04] p-6">
+                  <div className="mt-8 space-y-4 sm:mt-10 sm:space-y-5">
+                    <div className="rounded-[20px] bg-white/[0.04] p-5 sm:rounded-[24px] sm:p-6">
                       <p className="text-sm text-white/50">سعر الجهات التقليدية يبدأ من</p>
-                      <p className="mt-3 font-[Instrument_Serif] text-4xl font-bold text-white">
+                      <p className="mt-3 font-[Instrument_Serif] text-[2rem] font-bold text-white sm:text-4xl">
                         {formatPrice(agencyPrice)}
                       </p>
                       <p className="text-sm text-white/46">+ وقت أكثر وتكلفة إضافية مع كل طلب</p>
                     </div>
 
-                    <div className="rounded-[24px] bg-white/[0.04] p-6">
+                    <div className="rounded-[20px] bg-white/[0.04] p-5 sm:rounded-[24px] sm:p-6">
                       <p className="text-sm text-white/50">سعر المستقل العادي يبدأ من</p>
-                      <p className="mt-3 font-[Instrument_Serif] text-4xl font-bold text-white">
+                      <p className="mt-3 font-[Instrument_Serif] text-[2rem] font-bold text-white sm:text-4xl">
                         {formatPrice(freelancerPrice)}
                       </p>
                       <p className="text-sm text-white/46">+ صداع أكثر وردود كثيرة ذهابًا وإيابًا</p>
                     </div>
 
-                    <div className="rounded-[24px] bg-gradient-to-r from-pink-500 to-orange-500 p-6 text-white">
+                    <div className="rounded-[20px] bg-gradient-to-r from-pink-500 to-orange-500 p-5 text-white sm:rounded-[24px] sm:p-6">
                       <p className="text-sm text-white/82">مع عيادة فك الزنقة</p>
-                      <p className="mt-3 font-[Instrument_Serif] text-5xl font-bold">
+                      <p className="mt-3 font-[Instrument_Serif] text-[2.35rem] font-bold sm:text-5xl">
                         {formatPrice(studioPrice)}
                       </p>
                       <p className="text-sm text-white/86">أوفر عليك الوقت والجهد واللفة الطويلة</p>
@@ -845,7 +845,7 @@ export default function App() {
             </div>
           </section>
 
-          <section id="reviews" className="mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8">
+          <section id="reviews" className="mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
             <div className="grid gap-10 lg:grid-cols-[minmax(0,1.15fr)_minmax(22rem,0.85fr)] lg:items-start">
               <div>
                 <motion.div
@@ -897,7 +897,7 @@ export default function App() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.6 }}
-                className="liquid-glass rounded-[32px] p-6 sm:p-7"
+                className="liquid-glass rounded-[28px] p-5 sm:rounded-[32px] sm:p-7"
                 >
                   <div className="flex items-center gap-3 text-white/78">
                     <ShieldCheck size={18} />
@@ -939,7 +939,7 @@ export default function App() {
             </div>
           </section>
 
-          <section id="faq" className="mx-auto max-w-6xl px-4 py-24 sm:px-6 lg:px-8">
+          <section id="faq" className="mx-auto max-w-6xl px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -1000,13 +1000,13 @@ export default function App() {
             </div>
           </section>
 
-          <section id="about" className="mx-auto max-w-5xl px-4 pb-28 pt-8 sm:px-6 lg:px-8">
+          <section id="about" className="mx-auto max-w-5xl px-4 pb-24 pt-8 sm:px-6 sm:pb-28 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.45 }}
               transition={{ duration: 0.7 }}
-              className="liquid-glass rounded-[40px] px-8 py-12 sm:px-12 sm:py-16"
+              className="liquid-glass rounded-[32px] px-5 py-8 sm:rounded-[40px] sm:px-12 sm:py-16"
             >
               <p className="text-sm tracking-[0.35em] text-white/45">عن العيادة</p>
               <h2 className="mt-4 font-[Instrument_Serif] text-5xl leading-tight sm:text-6xl">
@@ -1018,13 +1018,13 @@ export default function App() {
             </motion.div>
           </section>
 
-          <section className="mx-auto max-w-7xl px-4 pb-14 sm:px-6 lg:px-8">
+          <section className="mx-auto max-w-7xl px-4 pb-12 sm:px-6 sm:pb-14 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.25 }}
               transition={{ duration: 0.6 }}
-              className="overflow-hidden rounded-[36px] border border-white/10 bg-[linear-gradient(135deg,rgba(255,102,82,0.18),rgba(255,255,255,0.04))] p-6 sm:p-8 lg:p-10"
+              className="overflow-hidden rounded-[30px] border border-white/10 bg-[linear-gradient(135deg,rgba(255,102,82,0.18),rgba(255,255,255,0.04))] p-5 sm:rounded-[36px] sm:p-8 lg:p-10"
             >
               <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-center">
                 <div className="text-right">
@@ -1069,10 +1069,10 @@ export default function App() {
           </footer>
         </main>
 
-        <div className="fixed bottom-5 left-1/2 z-40 w-[calc(100%-2rem)] max-w-md -translate-x-1/2 md:w-auto md:max-w-none md:translate-x-0 md:left-auto md:right-6">
+        <div className="fixed bottom-4 left-1/2 z-40 w-[calc(100%-1.25rem)] max-w-md -translate-x-1/2 md:bottom-5 md:w-auto md:max-w-none md:translate-x-0 md:left-auto md:right-6">
           <button
             type="button"
-            className="liquid-glass inline-flex w-full items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-medium text-white shadow-[0_18px_40px_rgba(0,0,0,0.28)] transition hover:bg-white/[0.05] md:w-auto"
+            className="liquid-glass inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-medium text-white shadow-[0_18px_40px_rgba(0,0,0,0.28)] transition hover:bg-white/[0.05] md:min-h-0 md:w-auto"
             onClick={() => setContactOpen(true)}
           >
             تواصل الآن
@@ -1100,7 +1100,7 @@ export default function App() {
                 transition={{ duration: 0.24 }}
                 className="fixed inset-x-4 top-1/2 z-50 mx-auto w-full max-w-md -translate-y-1/2"
               >
-                <div className="liquid-glass rounded-[18px] border border-white/10 bg-black/55 p-4 shadow-[0_28px_80px_rgba(0,0,0,0.48)] sm:p-5">
+                <div className="liquid-glass max-h-[80vh] overflow-y-auto rounded-[18px] border border-white/10 bg-black/55 p-4 shadow-[0_28px_80px_rgba(0,0,0,0.48)] sm:max-h-none sm:p-5">
                   <div className="flex items-start justify-between gap-4 border-b border-white/8 pb-5">
                     <div>
                       <p className="text-sm tracking-[0.3em] text-white/45">
@@ -1179,7 +1179,7 @@ export default function App() {
                 transition={{ duration: 0.24 }}
                 className="fixed inset-x-4 top-1/2 z-50 mx-auto w-full max-w-3xl -translate-y-1/2"
               >
-                <div className="liquid-glass rounded-[18px] border border-white/10 bg-black/55 p-5 shadow-[0_28px_80px_rgba(0,0,0,0.48)] sm:p-6">
+                <div className="liquid-glass max-h-[82vh] overflow-y-auto rounded-[18px] border border-white/10 bg-black/55 p-4 shadow-[0_28px_80px_rgba(0,0,0,0.48)] sm:max-h-none sm:p-6">
                   <div className="flex items-start justify-between gap-4 border-b border-white/8 pb-5">
                     <div>
                       <p className="text-sm tracking-[0.3em] text-white/45">الفريق الرسمي</p>
