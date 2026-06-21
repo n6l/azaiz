@@ -240,7 +240,7 @@ export default function App() {
                 className="h-11 w-11 object-contain brightness-[2.25] contrast-[1.22] saturate-0 drop-shadow-[0_0_16px_rgba(255,255,255,0.38)]"
               />
               <span className="apple-brand text-[0.95rem] text-white/84">
-                عيادة العزايز
+                عيادة فك الزنقة
               </span>
             </button>
 
