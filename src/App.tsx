@@ -29,6 +29,7 @@ type ContactCard = {
 type EmployeeCard = {
   name: string;
   username: string;
+  title?: string;
 };
 
 type FaqItem = {
@@ -126,12 +127,13 @@ const featureCards = [
 
 const contacts: ContactCard[] = [
   { role: "Founder / CEO", handle: "@0idw", featured: true },
-  { role: "Co-Founder", handle: "@9_nl" },
+  { role: "Founder", handle: "@9_nl" },
   { role: "Co-Founder", handle: "@x.6d" },
   { role: "Co-Founder / CTO", handle: "@2vw." },
 ];
 
 const employees: EmployeeCard[] = [
+  { name: "Dr-7s", username: "t1.6", title: "طبيب استشاري ورئيس قسم الباطنية" },
   { name: "dr-yoyo", username: "iconiiicc" },
   { name: "dr-misa", username: "lil.doodd" },
   { name: "dr-mia", username: "a7xiilx" },
@@ -1219,6 +1221,11 @@ export default function App() {
                             >
                               {employee.name}
                             </p>
+                            {employee.title ? (
+                              <p className="mt-1 text-[11px] leading-5 text-[#FFB48C] sm:text-xs">
+                                {employee.title}
+                              </p>
+                            ) : null}
                             <p
                               dir="ltr"
                               className="mt-1 font-[Instrument_Serif] text-[1.1rem] tracking-tight text-white/72 sm:mt-2 sm:text-[1.45rem]"
