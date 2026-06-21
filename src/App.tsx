@@ -447,10 +447,10 @@ export default function App() {
                         {brandPromise}. واجهة واضحة وباقات مفهومة وانطباع قوي من أول زيارة.
                       </p>
 
-                      <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:justify-end">
+                      <div className="mt-6 flex flex-col gap-3 md:flex-row md:justify-end">
                         <button
                           type="button"
-                          className="liquid-glass inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-medium text-white transition hover:bg-white/[0.05] sm:min-h-0 sm:w-auto"
+                          className="liquid-glass inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-medium text-white transition hover:bg-white/[0.05] md:min-h-0 md:w-auto"
                           onClick={() => setContactOpen(true)}
                         >
                           تواصل مع الإدارة
@@ -458,17 +458,17 @@ export default function App() {
                         </button>
                         <button
                           type="button"
-                          className="inline-flex min-h-12 w-full items-center justify-center rounded-full border border-white/12 bg-white/[0.03] px-6 py-3 text-sm font-medium text-white/90 transition hover:bg-white/[0.06] sm:min-h-0 sm:w-auto"
+                          className="inline-flex min-h-12 w-full items-center justify-center rounded-full border border-white/12 bg-white/[0.03] px-6 py-3 text-sm font-medium text-white/90 transition hover:bg-white/[0.06] md:min-h-0 md:w-auto"
                           onClick={() => scrollToId("#reviews")}
                         >
                           شاهد آراء العملاء
                         </button>
                       </div>
 
-                      <div className="mt-3 flex flex-col gap-3 sm:flex-row sm:justify-end">
+                      <div className="mt-3 flex flex-col gap-3 md:flex-row md:justify-end">
                         <button
                           type="button"
-                          className="inline-flex min-h-12 w-full items-center justify-center rounded-full border border-white/12 bg-white/[0.03] px-6 py-3 text-sm font-medium text-white/90 transition hover:bg-white/[0.06] sm:min-h-0 sm:w-auto"
+                          className="inline-flex min-h-12 w-full items-center justify-center rounded-full border border-white/12 bg-white/[0.03] px-6 py-3 text-sm font-medium text-white/90 transition hover:bg-white/[0.06] md:min-h-0 md:w-auto"
                           onClick={() => setEmployeesOpen(true)}
                         >
                           استعراض الفريق الرسمي
@@ -1102,11 +1102,11 @@ export default function App() {
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 exit={{ opacity: 0, y: 20, scale: 0.98 }}
                 transition={{ duration: 0.24 }}
-                className="fixed inset-x-0 bottom-0 z-50 mx-auto w-full sm:inset-x-4 sm:top-1/2 sm:max-w-md sm:-translate-y-1/2"
+                className="fixed inset-x-0 bottom-0 z-50 mx-auto w-full md:inset-x-4 md:top-1/2 md:max-w-md md:-translate-y-1/2"
               >
-                <div className="liquid-glass max-h-[85vh] overflow-y-auto rounded-t-[24px] border border-white/10 bg-black/90 p-4 shadow-[0_28px_80px_rgba(0,0,0,0.48)] sm:max-h-none sm:rounded-[18px] sm:bg-black/55 sm:p-5">
-                  <div className="mx-auto mb-4 h-1.5 w-14 rounded-full bg-white/12 sm:hidden" />
-                  <div className="flex items-start justify-between gap-4 border-b border-white/8 pb-4 sm:pb-5">
+                <div className="liquid-glass max-h-[85vh] overflow-y-auto rounded-t-[24px] border border-white/10 bg-black/90 p-4 shadow-[0_28px_80px_rgba(0,0,0,0.48)] md:max-h-none md:rounded-[18px] md:bg-black/55 md:p-5">
+                  <div className="mx-auto mb-4 h-1.5 w-14 rounded-full bg-white/12 md:hidden" />
+                  <div className="flex items-start justify-between gap-4 border-b border-white/8 pb-4 md:pb-5">
                     <div>
                       <p className="text-sm tracking-[0.3em] text-white/45">
                         تواصل مع الإدارة عبر الديسكورد
@@ -1122,11 +1122,11 @@ export default function App() {
                     </button>
                   </div>
 
-                  <div className="mt-5 flex flex-col gap-3 sm:mt-6">
+                  <div className="mt-5 flex flex-col gap-3 md:mt-6">
                     {contacts.map((contact) => (
                       <div
                         key={contact.handle}
-                        className={`w-full rounded-[16px] border bg-white/[0.03] p-3.5 text-right shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] sm:p-4 ${
+                        className={`w-full rounded-[16px] border bg-white/[0.03] p-3.5 text-right shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] md:p-4 ${
                           contact.featured ? "border-white/18 bg-white/[0.05]" : "border-white/8"
                         }`}
                       >
@@ -1147,8 +1147,8 @@ export default function App() {
                               dir="ltr"
                               className={`mt-2 font-[Instrument_Serif] tracking-tight ${
                                 contact.featured
-                                  ? "text-[1.45rem] text-white sm:text-[1.8rem]"
-                                  : "text-[1.3rem] text-white/92 sm:text-[1.65rem]"
+                                  ? "text-[1.45rem] text-white md:text-[1.8rem]"
+                                  : "text-[1.3rem] text-white/92 md:text-[1.65rem]"
                               }`}
                             >
                               {contact.handle.replace("@", "")}
@@ -1182,14 +1182,14 @@ export default function App() {
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 exit={{ opacity: 0, y: 20, scale: 0.98 }}
                 transition={{ duration: 0.24 }}
-                className="fixed inset-x-0 bottom-0 z-50 mx-auto w-full sm:inset-x-4 sm:top-1/2 sm:max-w-3xl sm:-translate-y-1/2"
+                className="fixed inset-x-0 bottom-0 z-50 mx-auto w-full md:inset-x-4 md:top-1/2 md:max-w-3xl md:-translate-y-1/2"
               >
-                <div className="liquid-glass max-h-[88vh] overflow-y-auto rounded-t-[24px] border border-white/10 bg-black/92 p-4 shadow-[0_28px_80px_rgba(0,0,0,0.48)] sm:max-h-none sm:rounded-[18px] sm:bg-black/55 sm:p-6">
-                  <div className="mx-auto mb-4 h-1.5 w-14 rounded-full bg-white/12 sm:hidden" />
-                  <div className="flex items-start justify-between gap-4 border-b border-white/8 pb-4 sm:pb-5">
+                <div className="liquid-glass max-h-[88vh] overflow-y-auto rounded-t-[24px] border border-white/10 bg-black/92 p-4 shadow-[0_28px_80px_rgba(0,0,0,0.48)] md:max-h-none md:rounded-[18px] md:bg-black/55 md:p-6">
+                  <div className="mx-auto mb-4 h-1.5 w-14 rounded-full bg-white/12 md:hidden" />
+                  <div className="flex items-start justify-between gap-4 border-b border-white/8 pb-4 md:pb-5">
                     <div>
                       <p className="text-sm tracking-[0.3em] text-white/45">الفريق الرسمي</p>
-                      <p className="mt-2 text-sm leading-6 text-white/72 sm:mt-3 sm:text-base sm:leading-7">
+                      <p className="mt-2 text-sm leading-6 text-white/72 md:mt-3 md:text-base md:leading-7">
                         الكادر المعتمد لدى عيادة فك الزنقة للتواصل والمتابعة والتنفيذ.
                       </p>
                     </div>
@@ -1203,31 +1203,31 @@ export default function App() {
                     </button>
                   </div>
 
-                  <div className="mt-5 grid gap-3 sm:mt-6 sm:grid-cols-2 lg:grid-cols-3">
+                  <div className="mt-5 grid gap-3 md:mt-6 md:grid-cols-2 lg:grid-cols-3">
                     {employees.map((employee) => (
                       <div
                         key={employee.username}
-                        className="rounded-[18px] border border-white/8 bg-white/[0.03] p-3.5 text-right shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] sm:rounded-[20px] sm:p-4"
+                        className="rounded-[18px] border border-white/8 bg-white/[0.03] p-3.5 text-right shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] md:rounded-[20px] md:p-4"
                       >
                         <div className="flex items-start justify-between gap-3">
-                          <span className="inline-flex h-9 w-9 items-center justify-center rounded-[12px] border border-white/10 bg-white/[0.04] text-white sm:h-10 sm:w-10">
+                          <span className="inline-flex h-9 w-9 items-center justify-center rounded-[12px] border border-white/10 bg-white/[0.04] text-white md:h-10 md:w-10">
                             <FaDiscord size={16} />
                           </span>
 
                           <div className="flex-1">
                             <p
                               dir="ltr"
-                              className="text-[1rem] font-semibold tracking-tight text-white/95 sm:text-[1.05rem]"
+                              className="text-[1rem] font-semibold tracking-tight text-white/95 md:text-[1.05rem]"
                             >
                               {employee.name}
                             </p>
                             <p
                               dir="ltr"
-                              className="mt-1.5 font-[Instrument_Serif] text-[1.25rem] tracking-tight text-white/72 sm:mt-2 sm:text-[1.45rem]"
+                              className="mt-1.5 font-[Instrument_Serif] text-[1.25rem] tracking-tight text-white/72 md:mt-2 md:text-[1.45rem]"
                             >
                               {employee.username}
                             </p>
-                            <p className="mt-2 text-xs leading-6 text-white/56 sm:mt-3 sm:text-sm">
+                            <p className="mt-2 text-xs leading-6 text-white/56 md:mt-3 md:text-sm">
                               عضو رسمي ضمن الكادر المعتمد.
                             </p>
                           </div>
