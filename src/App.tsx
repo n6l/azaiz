@@ -1222,7 +1222,7 @@ export default function App() {
                               {employee.name}
                             </p>
                             {employee.title ? (
-                              <p className="mt-1 text-[11px] leading-5 text-[#FFB48C] sm:text-xs">
+                              <p className="mt-1 text-[11px] leading-5 text-[#D7C08A] sm:text-xs">
                                 {employee.title}
                               </p>
                             ) : null}
@@ -1233,7 +1233,7 @@ export default function App() {
                               {employee.username}
                             </p>
                             <p className="mt-1.5 text-[11px] leading-5 text-white/56 sm:mt-3 sm:text-sm sm:leading-6">
-                              عضو رسمي ضمن الكادر المعتمد.
+                              دكتور رسمي ضمن الكادر المعتمد.
                             </p>
                           </div>
                         </div>
