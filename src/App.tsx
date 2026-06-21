@@ -137,6 +137,7 @@ const employees: EmployeeCard[] = [
   { name: "dr-yoyo", username: "iconiiicc" },
   { name: "dr-misa", username: "lil.doodd" },
   { name: "dr-mia", username: "a7xiilx" },
+  { name: "Maya", username: "maya" },
 ];
 
 const testimonials: Testimonial[] = [
@@ -1233,7 +1234,9 @@ export default function App() {
                               {employee.username}
                             </p>
                             <p className="mt-1.5 text-[11px] leading-5 text-white/56 sm:mt-3 sm:text-sm sm:leading-6">
-                              دكتور رسمي ضمن الكادر المعتمد.
+                              {employee.name === "Maya"
+                                ? "موظف رسمي ضمن الكادر المعتمد."
+                                : "طبيب رسمي ضمن الكادر المعتمد."}
                             </p>
                           </div>
                         </div>
