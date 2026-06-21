@@ -137,7 +137,7 @@ const employees: EmployeeCard[] = [
   { name: "dr-yoyo", username: "iconiiicc" },
   { name: "dr-misa", username: "lil.doodd" },
   { name: "dr-mia", username: "a7xiilx" },
-  { name: "Maya", username: "iv6zi." },
+  { name: "Maya", username: "iv6zi.", title: "موظفة استقبال" },
 ];
 
 const testimonials: Testimonial[] = [
