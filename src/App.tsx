@@ -146,6 +146,14 @@ const testimonials: Testimonial[] = [
     quote: "افضل موقع وافضل عيادة وربي ما في بعدها",
     highlight: "رأي مباشر وواضح",
   },
+  {
+    name: "asa",
+    role: "مراجعة موثقة",
+    rating: 5,
+    quote:
+      "صراحة انا مريضه عند الدكتوره يويو قمه فالاخلاق وسهوله في فهم المريض دخلت عندها طلعت انا شخص ثاني تماما اشكرك يويو ❤️❤️❤️",
+    highlight: "تجربة إنسانية مميزة",
+  },
 ];
 
 const faqItems: FaqItem[] = [
@@ -464,6 +472,16 @@ export default function App() {
                         </button>
                       </div>
 
+                      <div className="mt-3 flex flex-col gap-3 sm:flex-row sm:justify-end">
+                        <button
+                          type="button"
+                          className="inline-flex items-center justify-center rounded-full border border-white/12 bg-white/[0.03] px-6 py-3 text-sm font-medium text-white/90 transition hover:bg-white/[0.06]"
+                          onClick={() => setEmployeesOpen(true)}
+                        >
+                          استعراض الفريق الرسمي
+                        </button>
+                      </div>
+
                       <div className="mt-7 grid grid-cols-1 gap-3 text-center sm:mt-8 sm:grid-cols-3">
                         {[
                           { label: "وضوح", value: "100%" },
@@ -503,6 +521,26 @@ export default function App() {
                 <p className="mt-4 text-xl leading-9 text-white/86">{item.copy}</p>
               </motion.article>
             ))}
+          </section>
+
+          <section className="mx-auto max-w-7xl px-4 pb-8 sm:px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.5 }}
+              className="max-w-3xl"
+            >
+              <div className="rounded-[28px] border border-white/10 bg-white/[0.03] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] sm:p-6">
+                <p className="text-sm tracking-[0.28em] text-[#FFB48C]">سياسة العمل</p>
+                <div className="mt-4 space-y-3 text-sm leading-7 text-white/70 sm:text-base">
+                  <p>يتم اعتماد الطلب بعد مراجعة التفاصيل وتأكيد نطاق الخدمة بشكل واضح.</p>
+                  <p>يُعتمد السداد قبل بدء العمل، ويُعد جزءًا من إجراءات اعتماد الطلب.</p>
+                  <p>يتم التواصل والمتابعة عبر القنوات الرسمية المعتمدة لدى العيادة فقط.</p>
+                  <p>يمكن للعميل اختيار الشخص المناسب من الفريق الرسمي لدينا بحسب المتاح.</p>
+                </div>
+              </div>
+            </motion.div>
           </section>
 
           <section id="process" className="mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8">
@@ -1021,11 +1059,11 @@ export default function App() {
                 <div className="text-right">
                   <p className="text-sm tracking-[0.3em] text-white/52">الخطوة الأخيرة</p>
                   <h2 className="mt-4 font-[Instrument_Serif] text-4xl leading-tight text-white sm:text-5xl">
-                    إذا تبي الزنقة تنفك، تواصل الآن
+                    ابدأ طلبك عبر القنوات الرسمية
                   </h2>
                   <p className="mt-4 max-w-2xl text-base leading-8 text-white/72 sm:text-lg">
-                    كل شيء صار أوضح أمام الزائر: الخدمة، الباقات، الآراء، وطريقة العمل. بقي فقط
-                    زر قرار قوي يدفعه للتواصل بدل أن يطلع من الصفحة مترددًا.
+                    أصبحت الخدمة، الباقات، آلية العمل، والآراء واضحة أمام الزائر. هذه المرحلة
+                    مخصّصة لتوجيهه نحو التواصل الرسمي المعتمد وبدء الإجراء بثقة ووضوح.
                   </p>
                 </div>
 
@@ -1035,7 +1073,7 @@ export default function App() {
                     className="liquid-glass inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-medium text-white transition hover:bg-white/[0.06]"
                     onClick={() => setContactOpen(true)}
                   >
-                    ابدأ الآن
+                    تقديم طلب
                     <ArrowRight size={16} />
                   </button>
                   <button
@@ -1043,7 +1081,7 @@ export default function App() {
                     className="inline-flex items-center justify-center rounded-full border border-white/12 bg-white/[0.03] px-6 py-3 text-sm font-medium text-white/90 transition hover:bg-white/[0.06]"
                     onClick={() => scrollToId("#packages")}
                   >
-                    راجع الباقات
+                    استعراض الباقات
                   </button>
                 </div>
               </div>
@@ -1174,9 +1212,14 @@ export default function App() {
                 <div className="liquid-glass rounded-[18px] border border-white/10 bg-black/55 p-6 shadow-[0_28px_80px_rgba(0,0,0,0.48)] sm:p-7">
                   <div className="flex items-start justify-between gap-4 border-b border-white/8 pb-5">
                     <div>
-                      <p className="text-sm tracking-[0.3em] text-white/45">الموظفين</p>
+                      <p className="text-sm tracking-[0.3em] text-white/45">الفريق الرسمي</p>
                       <p className="mt-3 text-base leading-7 text-white/72">
-                        الموظفين الرسميين لدى عيادة فك الزنقة
+                        الكادر المعتمد لدى عيادة فك الزنقة والمسؤول عن جودة التواصل، المتابعة،
+                        والتنفيذ وفق المعايير المعتمدة.
+                      </p>
+                      <p className="mt-3 text-sm leading-7 text-white/54">
+                        يمكن للعميل اختيار الشخص المناسب من الفريق الرسمي لدينا بحسب طبيعة الطلب
+                        والمسار الأنسب للخدمة.
                       </p>
                     </div>
 
@@ -1193,7 +1236,7 @@ export default function App() {
                     {employees.map((employee, index) => (
                       <div
                         key={employee.username}
-                        className="rounded-[20px] border border-white/8 bg-white/[0.03] p-5 text-right shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]"
+                        className="rounded-[22px] border border-white/8 bg-white/[0.03] p-5 text-right shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]"
                       >
                         <div className="flex items-start justify-between gap-4">
                           <span className="inline-flex h-10 w-10 items-center justify-center rounded-[12px] border border-white/10 bg-white/[0.04] text-white">
@@ -1201,14 +1244,14 @@ export default function App() {
                           </span>
 
                           <div className="flex-1">
-                            <p className="text-xs tracking-[0.22em] text-white/42">
+                            <p className="text-xs tracking-[0.24em] text-[#FFB48C]">
                               {index === 0
-                                ? "فريق التنفيذ"
+                                ? "مسار التنفيذ"
                                 : index === 1
-                                  ? "فريق المتابعة"
-                                  : "فريق الدعم"}
+                                  ? "مسار المتابعة"
+                                  : "مسار الدعم"}
                             </p>
-                            <p className="text-lg text-white/95">{employee.name}</p>
+                            <p className="mt-2 text-lg text-white/95">{employee.name}</p>
                             <p
                               dir="ltr"
                               className="mt-2 font-[Instrument_Serif] text-[1.65rem] tracking-tight text-white/72"
@@ -1216,7 +1259,8 @@ export default function App() {
                               {employee.username}
                             </p>
                             <p className="mt-3 text-sm leading-7 text-white/56">
-                              عضو رسمي ضمن فريق عيادة فك الزنقة ومسؤول عن إبقاء التجربة مرتبة وسريعة.
+                              عضو رسمي ضمن الكادر المعتمد، ويشارك في تقديم تجربة منظمة، دقيقة،
+                              وسريعة وفق هوية العيادة ومعاييرها.
                             </p>
                           </div>
                         </div>
