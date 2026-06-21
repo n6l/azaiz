@@ -281,7 +281,7 @@ export default function App() {
                     className="h-9 w-9 object-contain brightness-[2.25] contrast-[1.22] saturate-0"
                   />
                   <span className="apple-brand text-[0.95rem] text-white/84">
-                    عيادة العزايز
+                    عيادة فك الزنقة
                   </span>
                 </div>
 
@@ -786,7 +786,7 @@ export default function App() {
                     <div>
                       <p className="text-sm tracking-[0.3em] text-white/45">الموظفين</p>
                       <p className="mt-3 text-base leading-7 text-white/72">
-                        الموظفين الرسميين لدى عيادة العزايز
+                        الموظفين الرسميين لدى عيادة فك الزنقة
                       </p>
                     </div>
 
