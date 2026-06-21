@@ -7,7 +7,6 @@ import {
   Menu,
   MessageSquareQuote,
   ShieldCheck,
-  Sparkles,
   Star,
   X,
 } from "lucide-react";
@@ -113,15 +112,15 @@ const navLinks = [
 const featureCards = [
   {
     title: "سرعة محسوبة",
-    copy: "نعطيك مسار واضح من البداية حتى التسليم بدون لف ولا انتظار غير مفهوم.",
+    copy: "مسار واضح من البداية حتى التسليم.",
   },
   {
     title: "تنسيق احترافي",
-    copy: "كل شيء يظهر بشكل مرتب وواضح ويشعرك أن الخدمة مدروسة من أول نظرة.",
+    copy: "عرض مرتب وواضح من أول نظرة.",
   },
   {
     title: "تواصل مباشر",
-    copy: "التواصل سهل والسؤال له جواب سريع بدل الضياع بين الرسائل والوعود.",
+    copy: "تواصل مباشر ورد واضح.",
   },
 ];
 
@@ -133,9 +132,9 @@ const contacts: ContactCard[] = [
 ];
 
 const employees: EmployeeCard[] = [
-  { name: "yoyo", username: "iconiiicc" },
-  { name: "misa", username: "lil.doodd" },
-  { name: "Mia / .56", username: "a7xiilx" },
+  { name: "dr-yoyo", username: "iconiiicc" },
+  { name: "dr-misa", username: "lil.doodd" },
+  { name: "dr-mia", username: "a7xiilx" },
 ];
 
 const testimonials: Testimonial[] = [
@@ -160,7 +159,7 @@ const faqItems: FaqItem[] = [
   {
     question: "ما الذي تقدمه عيادة فك الزنقة بالضبط؟",
     answer:
-      "نقدم تجربة منظمة وسريعة لمساعدتك في تنفيذ الخدمة المطلوبة، مع وضوح في الباقات، أسلوب التواصل، وخطوات العمل من البداية حتى التسليم.",
+      "نقدم خدمة منظمة وواضحة، مع باقات محددة وتواصل مباشر من البداية حتى التسليم.",
   },
   {
     question: "كيف أختار الباقة المناسبة لي؟",
@@ -440,18 +439,12 @@ export default function App() {
 
                   <div className="flex h-full items-center justify-end [direction:rtl]">
                     <div className="w-full max-w-[24rem] p-4 text-right sm:p-7 lg:max-w-[25rem] lg:p-0">
-                      <p className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-xs tracking-[0.24em] text-white/62">
-                        <Sparkles size={14} />
-                        {brandTagline}
-                      </p>
-
                       <h1 className="mt-5 bg-[linear-gradient(180deg,rgba(255,255,255,0.98)_0%,rgba(214,221,228,0.9)_36%,rgba(112,124,136,0.74)_100%)] bg-clip-text font-[Instrument_Serif] text-[2.8rem] leading-[1.02] text-transparent sm:mt-6 sm:text-6xl lg:text-[4.6rem]">
                         عيادة فك الزنقة
                       </h1>
 
                       <p className="mt-4 text-sm leading-7 text-white/72 sm:mt-5 sm:text-lg sm:leading-8">
-                        {brandPromise}. واجهة واضحة، باقات مفهومة، وهوية تعطي انطباعًا قويًا
-                        لأي شخص يدخل الموقع من أول دقيقة.
+                        {brandPromise}. واجهة واضحة وباقات مفهومة وانطباع قوي من أول زيارة.
                       </p>
 
                       <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:justify-end">
@@ -482,21 +475,6 @@ export default function App() {
                         </button>
                       </div>
 
-                      <div className="mt-7 grid grid-cols-1 gap-3 text-center sm:mt-8 sm:grid-cols-3">
-                        {[
-                          { label: "وضوح", value: "100%" },
-                          { label: "رد أسرع", value: "24/7" },
-                          { label: "انطباع أول", value: "راقي" },
-                        ].map((item) => (
-                          <div
-                            key={item.label}
-                            className="rounded-[22px] border border-white/10 bg-white/[0.03] px-3 py-4"
-                          >
-                            <p className="font-[Instrument_Serif] text-2xl text-white">{item.value}</p>
-                            <p className="mt-1 text-xs text-white/50">{item.label}</p>
-                          </div>
-                        ))}
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -537,7 +515,7 @@ export default function App() {
                   <p>يتم اعتماد الطلب بعد مراجعة التفاصيل وتأكيد نطاق الخدمة بشكل واضح.</p>
                   <p>يُعتمد السداد قبل بدء العمل، ويُعد جزءًا من إجراءات اعتماد الطلب.</p>
                   <p>يتم التواصل والمتابعة عبر القنوات الرسمية المعتمدة لدى العيادة فقط.</p>
-                  <p>يمكن للعميل اختيار الشخص المناسب من الفريق الرسمي لدينا بحسب المتاح.</p>
+                  <p>يتم تنسيق الطلب مع العضو الأنسب من الفريق الرسمي حسب طبيعة الخدمة والمتاح.</p>
                 </div>
               </div>
             </motion.div>
@@ -556,8 +534,7 @@ export default function App() {
                 3 خطوات وتكون الزنقة انحلّت
               </h2>
               <p className="mt-5 text-lg leading-8 text-white/68">
-                هذا القسم مهم جدًا لأنه يريح الزائر بسرعة: ماذا يفعل الآن، وماذا يحدث بعد ذلك،
-                ومتى يتوقع النتيجة.
+                3 خطوات واضحة من الطلب حتى النتيجة.
               </p>
             </motion.div>
 
@@ -607,9 +584,7 @@ export default function App() {
               <h2 className="mt-4 font-[Instrument_Serif] text-5xl leading-tight sm:text-6xl">
                 اختر الباقة التي تناسبك
               </h2>
-              <p className="mt-5 text-lg text-white/68">
-                خيارات بسيطة، قيمة واضحة، وتجربة مرتبة من أول تواصل حتى التسليم.
-              </p>
+              <p className="mt-5 text-lg text-white/68">خيارات واضحة وتجربة مرتبة.</p>
             </motion.div>
 
             <div className="mt-14 grid gap-6 lg:grid-cols-3">
@@ -881,11 +856,10 @@ export default function App() {
                 >
                   <p className="text-sm tracking-[0.35em] text-white/45">آراء العملاء</p>
                   <h2 className="mt-4 font-[Instrument_Serif] text-5xl leading-tight sm:text-6xl">
-                    انطباع يرفع الثقة من أول زيارة
+                    آراء العملاء
                   </h2>
-                  <p className="mt-5 max-w-2xl text-lg leading-8 text-white/68">
-                    أضفنا هذا القسم ليشعر الزائر أن هناك تجارب حقيقية وراء الخدمة، ولتكون
-                    الصفحة أكثر إقناعًا واحترافية.
+                  <p className="mt-5 max-w-2xl text-base leading-8 text-white/68 sm:text-lg">
+                    لإرسال رأيك، يمكنك إرساله إلى المدير ميث وسيتم نشره عبر الموقع.
                   </p>
                 </motion.div>
 
@@ -924,25 +898,24 @@ export default function App() {
                 viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.6 }}
                 className="liquid-glass rounded-[32px] p-6 sm:p-7"
-              >
-                <div className="flex items-center gap-3 text-white/78">
-                  <ShieldCheck size={18} />
-                  <p className="text-sm tracking-[0.2em]">آراء مختارة بعناية</p>
-                </div>
-                <h3 className="mt-5 font-[Instrument_Serif] text-4xl text-white">
-                  لماذا هذا القسم مهم؟
-                </h3>
-                <p className="mt-4 text-sm leading-7 text-white/62">
-                  لأن الزائر عندما يرى آراء واضحة وثابتة يشعر أن هناك تجربة حقيقية وراء الخدمة،
-                  وهذا يرفع الثقة ويقوي الانطباع العام بدون فتح باب تعليقات عشوائية داخل الموقع.
-                </p>
+                >
+                  <div className="flex items-center gap-3 text-white/78">
+                    <ShieldCheck size={18} />
+                    <p className="text-sm tracking-[0.2em]">آراء مختارة بعناية</p>
+                  </div>
+                  <h3 className="mt-5 font-[Instrument_Serif] text-4xl text-white">
+                    آراء ثابتة
+                  </h3>
+                  <p className="mt-4 text-sm leading-7 text-white/62">
+                    آراء ثابتة وواضحة داخل الموقع.
+                  </p>
 
-                <div className="mt-6 space-y-4">
-                  {[
-                    "الآراء المعروضة ثابتة ولا يمكن للزائر تعديلها.",
-                    "كل بطاقة رأي مصاغة لتدعم الثقة والانطباع الأول.",
-                    "يمكنكم لاحقًا استبدال النصوص يدويًا متى أردتم.",
-                  ].map((point) => (
+                  <div className="mt-6 space-y-4">
+                    {[
+                      "الآراء المعروضة ثابتة ولا يمكن للزائر تعديلها.",
+                      "يمكن إرسال الرأي إلى المدير ميث لاعتماده ونشره.",
+                      "يمكن تحديث الآراء يدويًا متى لزم ذلك.",
+                    ].map((point) => (
                     <div
                       key={point}
                       className="flex items-start gap-3 rounded-[22px] border border-white/10 bg-white/[0.03] p-4 text-sm leading-7 text-white/68"
@@ -979,8 +952,7 @@ export default function App() {
                 ماذا نكتب هنا؟
               </h2>
               <p className="mt-5 text-lg leading-8 text-white/68">
-                نكتب أكثر الأسئلة التي تمنع الزائر من اتخاذ القرار: ما الخدمة، كيف أختار،
-                كيف أتواصل، وكيف تُنشر المراجعات. وضعتها لك الآن بصياغة جاهزة وقابلة للتعديل.
+                أكثر الأسئلة التي يحتاجها الزائر قبل اتخاذ القرار.
               </p>
             </motion.div>
 
@@ -1041,8 +1013,7 @@ export default function App() {
                 مبني على الوضوح
               </h2>
               <p className="mt-6 text-lg leading-8 text-white/70">
-                الهدف من الصفحة أن يشعر الزائر أن الخدمة حقيقية ومرتبة وسهلة الفهم. لذلك أضفنا
-                آراء، أسئلة شائعة، وصياغة أوضح للثقة والقرار والتواصل.
+                صفحة واضحة ومرتبة تدعم الثقة وسهولة القرار.
               </p>
             </motion.div>
           </section>
@@ -1062,8 +1033,7 @@ export default function App() {
                     ابدأ طلبك عبر القنوات الرسمية
                   </h2>
                   <p className="mt-4 max-w-2xl text-base leading-8 text-white/72 sm:text-lg">
-                    أصبحت الخدمة، الباقات، آلية العمل، والآراء واضحة أمام الزائر. هذه المرحلة
-                    مخصّصة لتوجيهه نحو التواصل الرسمي المعتمد وبدء الإجراء بثقة ووضوح.
+                    كل ما يحتاجه الزائر أصبح واضحًا. هنا يبدأ التواصل الرسمي.
                   </p>
                 </div>
 
@@ -1207,19 +1177,14 @@ export default function App() {
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 exit={{ opacity: 0, y: 20, scale: 0.98 }}
                 transition={{ duration: 0.24 }}
-                className="fixed inset-x-4 top-1/2 z-50 mx-auto w-full max-w-lg -translate-y-1/2"
+                className="fixed inset-x-4 top-1/2 z-50 mx-auto w-full max-w-3xl -translate-y-1/2"
               >
-                <div className="liquid-glass rounded-[18px] border border-white/10 bg-black/55 p-6 shadow-[0_28px_80px_rgba(0,0,0,0.48)] sm:p-7">
+                <div className="liquid-glass rounded-[18px] border border-white/10 bg-black/55 p-5 shadow-[0_28px_80px_rgba(0,0,0,0.48)] sm:p-6">
                   <div className="flex items-start justify-between gap-4 border-b border-white/8 pb-5">
                     <div>
                       <p className="text-sm tracking-[0.3em] text-white/45">الفريق الرسمي</p>
                       <p className="mt-3 text-base leading-7 text-white/72">
-                        الكادر المعتمد لدى عيادة فك الزنقة والمسؤول عن جودة التواصل، المتابعة،
-                        والتنفيذ وفق المعايير المعتمدة.
-                      </p>
-                      <p className="mt-3 text-sm leading-7 text-white/54">
-                        يمكن للعميل اختيار الشخص المناسب من الفريق الرسمي لدينا بحسب طبيعة الطلب
-                        والمسار الأنسب للخدمة.
+                        الكادر المعتمد لدى عيادة فك الزنقة للتواصل والمتابعة والتنفيذ.
                       </p>
                     </div>
 
@@ -1232,11 +1197,11 @@ export default function App() {
                     </button>
                   </div>
 
-                  <div className="mt-6 grid gap-3 sm:grid-cols-2">
-                    {employees.map((employee, index) => (
+                  <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                    {employees.map((employee) => (
                       <div
                         key={employee.username}
-                        className="rounded-[22px] border border-white/8 bg-white/[0.03] p-5 text-right shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]"
+                        className="rounded-[20px] border border-white/8 bg-white/[0.03] p-4 text-right shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]"
                       >
                         <div className="flex items-start justify-between gap-4">
                           <span className="inline-flex h-10 w-10 items-center justify-center rounded-[12px] border border-white/10 bg-white/[0.04] text-white">
@@ -1244,23 +1209,20 @@ export default function App() {
                           </span>
 
                           <div className="flex-1">
-                            <p className="text-xs tracking-[0.24em] text-[#FFB48C]">
-                              {index === 0
-                                ? "مسار التنفيذ"
-                                : index === 1
-                                  ? "مسار المتابعة"
-                                  : "مسار الدعم"}
-                            </p>
-                            <p className="mt-2 text-lg text-white/95">{employee.name}</p>
                             <p
                               dir="ltr"
-                              className="mt-2 font-[Instrument_Serif] text-[1.65rem] tracking-tight text-white/72"
+                              className="text-[1.05rem] font-semibold tracking-tight text-white/95"
+                            >
+                              {employee.name}
+                            </p>
+                            <p
+                              dir="ltr"
+                              className="mt-2 font-[Instrument_Serif] text-[1.45rem] tracking-tight text-white/72"
                             >
                               {employee.username}
                             </p>
-                            <p className="mt-3 text-sm leading-7 text-white/56">
-                              عضو رسمي ضمن الكادر المعتمد، ويشارك في تقديم تجربة منظمة، دقيقة،
-                              وسريعة وفق هوية العيادة ومعاييرها.
+                            <p className="mt-3 text-sm leading-6 text-white/56">
+                              عضو رسمي ضمن الكادر المعتمد.
                             </p>
                           </div>
                         </div>
