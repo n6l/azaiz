@@ -597,14 +597,16 @@ export default function App() {
                   transition={{ duration: 0.65, delay: index * 0.1 }}
                   whileHover={{ y: -8 }}
                   className={`liquid-glass flex min-h-[unset] flex-col rounded-[28px] p-5 transition-transform sm:min-h-[520px] sm:rounded-[36px] sm:p-8 ${
-                    pkg.featured ? "ring-1 ring-white/20" : ""
+                    pkg.featured
+                      ? "ring-1 ring-white/20 bg-[linear-gradient(180deg,rgba(255,255,255,0.06),rgba(255,255,255,0.02))]"
+                      : ""
                   }`}
                 >
                   <div>
                     <div className="flex items-start justify-between gap-4">
                       <p className="text-sm tracking-[0.3em] text-white/45">{pkg.name}</p>
                       {pkg.featured ? (
-                        <span className="liquid-glass rounded-full px-3 py-1 text-xs text-white/80">
+                        <span className="liquid-glass rounded-full px-3 py-1 text-[11px] text-white/80 sm:text-xs">
                           الأكثر طلبًا
                         </span>
                       ) : null}
@@ -613,19 +615,21 @@ export default function App() {
                       <p className="bg-[linear-gradient(180deg,rgba(255,255,255,0.98)_0%,rgba(214,221,228,0.88)_36%,rgba(112,124,136,0.72)_100%)] bg-clip-text font-[Instrument_Serif] text-[2rem] text-transparent sm:text-4xl">
                         {pkg.priceLines[0]}
                       </p>
-                      <p className="text-sm text-white/56">{pkg.priceLines[1]}</p>
-                      <p className="text-sm text-white/56">{pkg.priceLines[2]}</p>
+                      <p className="text-xs text-white/56 sm:text-sm">{pkg.priceLines[1]}</p>
+                      <p className="text-xs text-white/56 sm:text-sm">{pkg.priceLines[2]}</p>
                     </div>
                     <p className="mt-5 text-base leading-7 text-white/82 sm:mt-6 sm:text-lg sm:leading-8">{pkg.description}</p>
                   </div>
 
                   <div className="mt-8 sm:mt-10">
-                    <p className="text-sm text-white/48">ما تتضمنه الباقة</p>
+                    <p className="text-xs tracking-[0.22em] text-white/48 sm:text-sm sm:tracking-normal">
+                      ما تتضمنه الباقة
+                    </p>
                   </div>
 
                   <div className="mt-5 flex-1 space-y-3 sm:mt-6 sm:space-y-4">
                     {pkg.bullets.map((bullet) => (
-                      <div key={bullet} className="flex items-center gap-3 text-white/76">
+                      <div key={bullet} className="flex items-center gap-3 text-sm text-white/76 sm:text-base">
                         <span className="liquid-glass inline-flex rounded-full p-2">
                           <Check size={14} />
                         </span>
@@ -809,14 +813,14 @@ export default function App() {
                     <ShieldCheck size={18} />
                     <p className="text-sm tracking-[0.2em]">تقدير واضح قبل البدء</p>
                   </div>
-                  <h3 className="mt-5 text-2xl text-white">التكلفة التقديرية</h3>
-                  <p className="mt-4 max-w-lg text-base leading-7 text-white/62">
+                  <h3 className="mt-4 text-[1.45rem] text-white sm:mt-5 sm:text-2xl">التكلفة التقديرية</h3>
+                  <p className="mt-3 max-w-lg text-sm leading-7 text-white/62 sm:mt-4 sm:text-base">
                     غيّر نوع الخدمة وعدد الاختبارات والسرعة، وشوف الفرق بين الأسعار المعتادة والسعر
                     الأنسب مع عيادة فك الزنقة.
                   </p>
 
                   <div className="mt-8 space-y-4 sm:mt-10 sm:space-y-5">
-                    <div className="rounded-[20px] bg-white/[0.04] p-5 sm:rounded-[24px] sm:p-6">
+                    <div className="rounded-[20px] bg-white/[0.04] p-4 sm:rounded-[24px] sm:p-6">
                       <p className="text-sm text-white/50">سعر الجهات التقليدية يبدأ من</p>
                       <p className="mt-3 font-[Instrument_Serif] text-[2rem] font-bold text-white sm:text-4xl">
                         {formatPrice(agencyPrice)}
@@ -824,7 +828,7 @@ export default function App() {
                       <p className="text-sm text-white/46">+ وقت أكثر وتكلفة إضافية مع كل طلب</p>
                     </div>
 
-                    <div className="rounded-[20px] bg-white/[0.04] p-5 sm:rounded-[24px] sm:p-6">
+                    <div className="rounded-[20px] bg-white/[0.04] p-4 sm:rounded-[24px] sm:p-6">
                       <p className="text-sm text-white/50">سعر المستقل العادي يبدأ من</p>
                       <p className="mt-3 font-[Instrument_Serif] text-[2rem] font-bold text-white sm:text-4xl">
                         {formatPrice(freelancerPrice)}
@@ -832,7 +836,7 @@ export default function App() {
                       <p className="text-sm text-white/46">+ صداع أكثر وردود كثيرة ذهابًا وإيابًا</p>
                     </div>
 
-                    <div className="rounded-[20px] bg-gradient-to-r from-pink-500 to-orange-500 p-5 text-white sm:rounded-[24px] sm:p-6">
+                    <div className="rounded-[20px] bg-gradient-to-r from-pink-500 to-orange-500 p-4 text-white sm:rounded-[24px] sm:p-6">
                       <p className="text-sm text-white/82">مع عيادة فك الزنقة</p>
                       <p className="mt-3 font-[Instrument_Serif] text-[2.35rem] font-bold sm:text-5xl">
                         {formatPrice(studioPrice)}
@@ -1098,10 +1102,11 @@ export default function App() {
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 exit={{ opacity: 0, y: 20, scale: 0.98 }}
                 transition={{ duration: 0.24 }}
-                className="fixed inset-x-4 top-1/2 z-50 mx-auto w-full max-w-md -translate-y-1/2"
+                className="fixed inset-x-0 bottom-0 z-50 mx-auto w-full sm:inset-x-4 sm:top-1/2 sm:max-w-md sm:-translate-y-1/2"
               >
-                <div className="liquid-glass max-h-[80vh] overflow-y-auto rounded-[18px] border border-white/10 bg-black/55 p-4 shadow-[0_28px_80px_rgba(0,0,0,0.48)] sm:max-h-none sm:p-5">
-                  <div className="flex items-start justify-between gap-4 border-b border-white/8 pb-5">
+                <div className="liquid-glass max-h-[85vh] overflow-y-auto rounded-t-[24px] border border-white/10 bg-black/90 p-4 shadow-[0_28px_80px_rgba(0,0,0,0.48)] sm:max-h-none sm:rounded-[18px] sm:bg-black/55 sm:p-5">
+                  <div className="mx-auto mb-4 h-1.5 w-14 rounded-full bg-white/12 sm:hidden" />
+                  <div className="flex items-start justify-between gap-4 border-b border-white/8 pb-4 sm:pb-5">
                     <div>
                       <p className="text-sm tracking-[0.3em] text-white/45">
                         تواصل مع الإدارة عبر الديسكورد
@@ -1117,11 +1122,11 @@ export default function App() {
                     </button>
                   </div>
 
-                  <div className="mt-6 flex flex-col gap-3">
+                  <div className="mt-5 flex flex-col gap-3 sm:mt-6">
                     {contacts.map((contact) => (
                       <div
                         key={contact.handle}
-                        className={`w-full rounded-[16px] border bg-white/[0.03] p-4 text-right shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] ${
+                        className={`w-full rounded-[16px] border bg-white/[0.03] p-3.5 text-right shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] sm:p-4 ${
                           contact.featured ? "border-white/18 bg-white/[0.05]" : "border-white/8"
                         }`}
                       >
@@ -1140,10 +1145,10 @@ export default function App() {
                             </p>
                             <p
                               dir="ltr"
-                              className={`mt-3 font-[Instrument_Serif] tracking-tight ${
+                              className={`mt-2 font-[Instrument_Serif] tracking-tight ${
                                 contact.featured
-                                  ? "text-[1.8rem] text-white"
-                                  : "text-[1.65rem] text-white/92"
+                                  ? "text-[1.45rem] text-white sm:text-[1.8rem]"
+                                  : "text-[1.3rem] text-white/92 sm:text-[1.65rem]"
                               }`}
                             >
                               {contact.handle.replace("@", "")}
@@ -1177,13 +1182,14 @@ export default function App() {
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 exit={{ opacity: 0, y: 20, scale: 0.98 }}
                 transition={{ duration: 0.24 }}
-                className="fixed inset-x-4 top-1/2 z-50 mx-auto w-full max-w-3xl -translate-y-1/2"
+                className="fixed inset-x-0 bottom-0 z-50 mx-auto w-full sm:inset-x-4 sm:top-1/2 sm:max-w-3xl sm:-translate-y-1/2"
               >
-                <div className="liquid-glass max-h-[82vh] overflow-y-auto rounded-[18px] border border-white/10 bg-black/55 p-4 shadow-[0_28px_80px_rgba(0,0,0,0.48)] sm:max-h-none sm:p-6">
-                  <div className="flex items-start justify-between gap-4 border-b border-white/8 pb-5">
+                <div className="liquid-glass max-h-[88vh] overflow-y-auto rounded-t-[24px] border border-white/10 bg-black/92 p-4 shadow-[0_28px_80px_rgba(0,0,0,0.48)] sm:max-h-none sm:rounded-[18px] sm:bg-black/55 sm:p-6">
+                  <div className="mx-auto mb-4 h-1.5 w-14 rounded-full bg-white/12 sm:hidden" />
+                  <div className="flex items-start justify-between gap-4 border-b border-white/8 pb-4 sm:pb-5">
                     <div>
                       <p className="text-sm tracking-[0.3em] text-white/45">الفريق الرسمي</p>
-                      <p className="mt-3 text-base leading-7 text-white/72">
+                      <p className="mt-2 text-sm leading-6 text-white/72 sm:mt-3 sm:text-base sm:leading-7">
                         الكادر المعتمد لدى عيادة فك الزنقة للتواصل والمتابعة والتنفيذ.
                       </p>
                     </div>
@@ -1197,31 +1203,31 @@ export default function App() {
                     </button>
                   </div>
 
-                  <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                  <div className="mt-5 grid gap-3 sm:mt-6 sm:grid-cols-2 lg:grid-cols-3">
                     {employees.map((employee) => (
                       <div
                         key={employee.username}
-                        className="rounded-[20px] border border-white/8 bg-white/[0.03] p-4 text-right shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]"
+                        className="rounded-[18px] border border-white/8 bg-white/[0.03] p-3.5 text-right shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] sm:rounded-[20px] sm:p-4"
                       >
-                        <div className="flex items-start justify-between gap-4">
-                          <span className="inline-flex h-10 w-10 items-center justify-center rounded-[12px] border border-white/10 bg-white/[0.04] text-white">
+                        <div className="flex items-start justify-between gap-3">
+                          <span className="inline-flex h-9 w-9 items-center justify-center rounded-[12px] border border-white/10 bg-white/[0.04] text-white sm:h-10 sm:w-10">
                             <FaDiscord size={16} />
                           </span>
 
                           <div className="flex-1">
                             <p
                               dir="ltr"
-                              className="text-[1.05rem] font-semibold tracking-tight text-white/95"
+                              className="text-[1rem] font-semibold tracking-tight text-white/95 sm:text-[1.05rem]"
                             >
                               {employee.name}
                             </p>
                             <p
                               dir="ltr"
-                              className="mt-2 font-[Instrument_Serif] text-[1.45rem] tracking-tight text-white/72"
+                              className="mt-1.5 font-[Instrument_Serif] text-[1.25rem] tracking-tight text-white/72 sm:mt-2 sm:text-[1.45rem]"
                             >
                               {employee.username}
                             </p>
-                            <p className="mt-3 text-sm leading-6 text-white/56">
+                            <p className="mt-2 text-xs leading-6 text-white/56 sm:mt-3 sm:text-sm">
                               عضو رسمي ضمن الكادر المعتمد.
                             </p>
                           </div>
