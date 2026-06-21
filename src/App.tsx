@@ -93,7 +93,7 @@ const featureCards = [
 
 const contacts: ContactCard[] = [
   { role: "Founder / CEO 3z", handle: "@0idw", featured: true },
-  { role: "Co-Founder 71", handle: "@9_nl" },
+  { role: "Founder 71", handle: "@9_nl" },
   { role: "Co-Founder Dark", handle: "@x.6d" },
   { role: "Co-Founder / CTO myth", handle: "@2vw." },
 ];
